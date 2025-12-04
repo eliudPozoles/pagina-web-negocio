@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>YAMAAJ TATTO</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --dark:#0b0b0b;
+    --muted:#7a7a74;
+    --light:#e6e6e6;
+    --page-max:1200px;
+  }
+  *{box-sizing:border-box}
+  body{ margin:0; font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:#111; background:#fff; }
+
+  /* top nav / logo */
+  .nav{
+    max-width:var(--page-max);
+    margin:18px auto 0;
+    padding:0 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .logo{ font-family:"Playfair Display", serif; font-size:14px; letter-spacing:1px; }
+
+  /* hero big title centered */
+  .hero{
+    text-align:center;
+    margin:18px 0 10px;
+  }
+  .hero h1{ font-family:"Playfair Display", serif; font-size:56px; margin:6px 0; color:#222; }
+
+  /* first big mosaic image */
+  .mosaic{
+    max-width:1100px;
+    margin:26px auto 40px; /* <-- MÁS ESPACIO con la galería */
+    padding:0 20px;
+  }
+  .mosaic img{
+  width:100%;
+  max-width:500px;   /* 🔥 cambia este número */
+  display:block;
+  margin:0 auto;
+}
+
+  hr.sep{ border:0; height:1px; background:#e7e7e7; margin:46px 0; }
+
+  /* second long gallery */
+  .gallery-long{
+    max-width:1100px;
+    margin:0 auto;
+    padding:18px 20px 30px;
+  }
+  .gallery-long h2{
+    text-align:center;
+    font-family:"Playfair Display", serif;
+    font-size:36px;
+    color:#222;
+    margin:10px 0 50px;
+  }
+
+  /* --------------------------
+     GRID ajustada: imágenes más pequeñas (300px)
+     -------------------------- */
+  .grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:80px 60px;  /* más espacio entre imágenes */
+    justify-items:center;
+    padding-bottom:30px;
+  }
+
+  .grid .item{
+    padding:14px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .grid .item img{
+    width:100%;
+    max-width:300px;   /* <-- AQUÍ EL TAMAÑO PEQUEÑO */
+    display:block;
+    object-fit:cover;
+    border-radius:6px;
+    border:1px solid #eee; /* borde suave */
+  }
+
+  /* responsive: una sola columna */
+  @media (max-width:900px){
+    .grid{
+      grid-template-columns: 1fr;
+      gap:40px;
+    }
+  }
+
+  /* butterfly */
+  .butterfly{
+  width:100%;
+  max-width:500px;  
+  display:block;
+  margin:0 auto;
+  text-align:center;
+  }
+  .butterfly img{ max-width:700px; width:100%; display:inline-block; }
+
+  /* footer */
+  .footer-dark{
+    background:#0b0b0b;
+    color:#ddd;
+    padding:44px 20px 24px;
+    margin-top:10px;
+  }
+  .footer-inner{
+    max-width:var(--page-max);
+    margin:0 auto;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding:24px 20px;
+    gap:10px;
+    align-items:start;
+  }
+  .footer-left, .footer-center, .footer-right{ font-size:12px; color:#ddd; }
+  .footer-center{text-align:center;}
+  .footer-right{text-align:right;}
+
+  .footer-links{
+    max-width:var(--page-max);
+    margin:20px auto 6px;
+    padding:0 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .btn-link{
+    color:#ddd;
+    text-decoration:none;
+    font-size:12px;
+    letter-spacing:1px;
+    padding:6px 10px;
+    border:1px solid rgba(255,255,255,0.03);
+  }
+
+  .made-by{ text-align:center; color:#ddd; font-size:11px; margin-top:10px; }
+
+  .footer-giant{
+    max-width:var(--page-max);
+    margin:18px auto 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    padding:30px 40px 8px;
+  }
+  .footer-giant .letter{
+    font-family:"Playfair Display", serif;
+    font-size:220px;
+    color:#fff;
+    line-height:0.8;
+    user-select:none;
+  }
+  .footer-giant .dot{ font-size:36px; color:#fff; align-self:center; }
+</style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <div class="nav">
+    <div class="logo">YAMAAJ</div>
+    <div style="font-size:13px; letter-spacing:1px;">TRABAJOS &nbsp;&nbsp; CONTACTOS</div>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero" role="banner">
+    <h1>JAMAAJ TATTO</h1>
+  </header>
+
+  <!-- Primera imagen -->
+  <section class="mosaic">
+    <img src="imag/Multimedia (3).jpg" alt="portada mosaic">
+  </section>
+
+  <hr class="sep">
+
+  <!-- GALERÍA -->
+  <section class="gallery-long">
+    <h2>Trabajos</h2>
+
+    <div class="grid">
+      <div class="item"><img src="imag/Multimedia (4).jpg" alt="tattoo 1"></div>
+      <div class="item"><img src="imag/Multimedia (5).jpg" alt="tattoo 2"></div>
+
+      <div class="item"><img src="imag/Multimedia (6).jpg" alt="tattoo 3"></div>
+      <div class="item"><img src="imag/Multimedia (7).jpg" alt="tattoo 4"></div>
+
+      <div class="item"><img src="imag/Multimedia (8).jpg" alt="tattoo 5"></div>
+      <div class="item"><img src="imag/Multimedia (10).jpg" alt="tattoo 6"></div>
+    </div>
+  </section>
+
+  <!-- MARIPOSA -->
+  <section class="butterfly">
+    <img src="imag/Multimedia 2.jpg" alt="mariposa grande">
+    <div style="margin-top:12px; font-size:13px; color:#666;">YAMAAJ TATTO</div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-dark">
+    <div class="footer-inner">
+      <div class="footer-left">YAMAAJ TATTO</div>
+      <div class="footer-center">LOCAL TATTO</div>
+      <div class="footer-right">LEÓN, GTO</div>
+    </div>
+
+    <div class="footer-links">
+      <a class="btn-link" href="mhttps://www.tiktok.com/@jdfkrp/video/7218049485652462854">EMAIL</a>
+      <a class="btn-link" href="https://www.instagram.com/yaamajtattoo?igsh=aWNsOWdtOWs0ZDIy" target="_blank">INSTA</a>
+      <a class="btn-link" href="https://www.facebook.com/profile.php?id=61583216377138" target="_blank">FACEBOOK</a>
+    </div>
+
+    
+
+    <div class="footer-giant">
+      <div class="letter">Y</div>
+      <div class="dot">●</div>
+      <div class="letter">T</div>
+    </div>
+  </footer>
+
+</body>
+</html>
